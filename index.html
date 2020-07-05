@@ -3,21 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jogo da Memória Pokemon</title>
+  <title>Jogo da Memória</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <div class="header__title">
-      <h1>Jogo da Memória Pokemon</h1>
+      <h1>Jogo da Memória</h1>
     </div>
-    <nav class="header__menu">
-      <ul class="menu__list">
-        <li class="menu__item">Novo jogo</li>
+    <nav>
+      <ul class="header__menu">
+        <li class="menu__item"><span id="newGame">Novo jogo</span></li>
       </ul>
     </nav>
   </header>
   <main>
-    <section class="players">
+    <section id="players" class="players">
       <article class="player__name">
         <label for="player__one">Jogador 1</label>
         <input type="text" class="player player__one" placeholder="Jogador 1">
@@ -28,8 +29,14 @@
       </article>
     </section>
     <section class="game">
-      <button class="game__start">Começar</button>
+      <div id="gameStart" class="game__start">
+        <button id="startBtn" class="start__button">Começar</button>
+      </div>
+      <div id="gameScreen" class="game__screen hide">
+        <h1>CARDS</h1>
+      </div>
     </section>
   </main>
+  <script src="main.js"></script>
 </body>
 </html>
